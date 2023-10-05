@@ -1,0 +1,313 @@
+/* Algemente styling */
+
+body {
+  background: #ffffff;
+  justify-content: center;
+}
+
+/* Vintage jewelry */
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 1;
+  font-size: 60px;
+  margin-left: 1em;
+  text-align: center;
+  color: rgb(5, 41, 12);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Menu balk */
+nav li {
+  display: flex;
+  list-style-type: none;
+  padding: .6em;
+  margin: 0 3em;
+  font-size: 25px;
+  text-decoration: none; 
+  color: black;
+  cursor: default; /* Voeg dit toe om de cursorstijl te wijzigen */
+}
+
+nav li a {
+  text-decoration: none; /* Voeg dit toe om de standaard linkstijl te verwijderen */
+  color: rgb(0, 0, 0); /* Voeg dit toe om de tekstkleur zwart te maken */
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+
+nav {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  transition: all 0.5s ease;
+  border-bottom: #000000;
+  text-decoration: none; 
+  border-top: 1px solid #000; 
+  margin-left: 3em;
+}
+
+nav li:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition-duration: 0.5s;
+  transform: scale(1);
+  transition: all 0.3s;
+  transition-delay: 0.1s;
+  border-bottom: 1px solid rgb(0, 0, 0); /* Voeg deze regel toe om een onderstreping toe te voegen bij hover */
+}
+
+
+
+/* tab */
+
+a :focus {
+  background-color: hotpink;
+}
+
+
+.link--underkine {
+  text-decoration: none;
+  color: white;
+}
+
+/* Einde menu balk */
+
+
+/* tekst*/
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 1;
+  font-size: 20px;
+  color: rgb(5, 41, 12);
+  align-items: center;
+}
+
+h4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 0;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(5, 41, 12);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+h3 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  color: rgba(255, 255, 255, 0.899);
+  font-size: 1000px;
+  font-weight: 300;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: -1.5em;
+}
+
+
+/* beginscherm img */
+.begin {
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+.images.home {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 1em;
+}
+
+.images.home li {
+  margin: 0 10px;
+}
+
+.images.home img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* gift seson image */
+
+.images.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.images.home li {
+  margin: 0 10px;
+}
+
+.images.home img {
+  max-width: 100%;
+  height: auto;
+  transition-delay: 0.30s;
+  transition: all 0.3s;
+  transform: scale(1);
+}
+
+.homeeee:hover {
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+/* draaien */
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.draaien {
+  animation: spin 10s linear infinite;
+}
+
+
+h3 {
+  width: 100%;
+  position: absolute;
+  top: 55%; /* Verhoogde waarde om het naar beneden te brengen */
+  color: rgba(255, 255, 255, 0.899);
+  font-size: 40px;
+  font-weight: 300;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 1px; /* Hiermee kun je het h3-element een beetje naar boven of beneden aanpassen */
+}
+
+
+header {
+  width: 30em;
+  padding: 6;
+  margin-left: 30em;
+  margin-right: 15em;
+  align-items: center;
+  -ms-flex-align: center;
+  justify-content: center;
+}
+
+
+
+/* boven aan img */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/****************/
+/* about pagina */
+/****************/
+
+
+
+.about {
+  height: auto;
+  width: 45%;
+}
+
+.aboutp {
+  font-size: 22px;
+  margin-top: 4em;
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+article {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  margin-top: 1em;
+  border: 1px;
+  margin: 2em;
+  background-color: rgba(248, 241, 241, 0.71);
+ 
+}
+
+article img {
+  width: 22em;
+  height: 35em;
+  padding: 2em;
+  display: flex;
+}
+
+
+/**********************/
+/* Inspiration Pagina */
+/**********************/
+
+
+.detail {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 8%;
+  box-sizing: border-box;
+  overflow: auto;
+  margin-top: 1em;
+
+}
+
+
+.inspiration {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4em;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+}
+
+.inspiration img{
+  width: 25em;
+  height: 25em;
+  transition: transform 0.5s ease;
+}
+
+.inspiration img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/***************/
+/* blog pagina */
+/***************/
+
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 4em;
+}
+
+
+.blog-post {
+  width: 30%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+
+.blog-post img {
+  max-width: 100%;
+  height: 15em;
+}
+
