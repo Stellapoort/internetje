@@ -1,313 +1,374 @@
+/*********************/
 /* Algemente styling */
+/*********************/
 
-body {
-  background: #ffffff;
-  justify-content: center;
+*, *::after, *::before {
+  background-color: var(--achtergrondKleur);
+  color: var(--tekstKleur);
 }
 
-/* Vintage jewelry */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none; 
+  background: none;
+}
+
+
+/* Dark and light mode*/
+:root {
+  --tekstKleur: #000000;
+  --achtergrondKleur: hsl(0, 0%, 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tekstKleur: rgb(248, 243, 243);
+    --achtergrondKleur: #212b36;
+  }
+}
+
+/* header */
+
+/* Vintage jewelry h1*/
 h1 {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 1;
-  font-size: 60px;
-  margin-left: 1em;
+  font-size: 50px;
   text-align: center;
-  color: rgb(5, 41, 12);
-  font-family: 'Times New Roman', Times, serif;
+  color: var(--tekstKleur);
+  padding-bottom: 0.5em;
+  background: none;
 }
+
+h1:active {
+  color: purple;
+}
+
+/* draaiend h1 */
+
+@keyframes rotateOnce {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h1  {
+  animation: rotateOnce 2s linear; /* De animatie duurt 2 seconden */
+}
+
 
 /* Menu balk */
-nav li {
-  display: flex;
-  list-style-type: none;
-  padding: .6em;
-  margin: 0 3em;
-  font-size: 25px;
-  text-decoration: none; 
-  color: black;
-  cursor: default; /* Voeg dit toe om de cursorstijl te wijzigen */
+header {
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 0.3em;
+  border-bottom: 0.5px solid var(--tekstKleur);
 }
 
-nav li a {
-  text-decoration: none; /* Voeg dit toe om de standaard linkstijl te verwijderen */
-  color: rgb(0, 0, 0); /* Voeg dit toe om de tekstkleur zwart te maken */
+nav {
+  transition: all 0.5s ease;
+  border-top: 0.5px solid var(--tekstKleur); 
 }
 
 ul {
   display: flex;
   justify-content: center;
-  list-style-type: none;
 }
 
-
-nav {
-  color: rgb(0, 0, 0);
-  background-color: #ffffff;
-  transition: all 0.5s ease;
-  border-bottom: #000000;
-  text-decoration: none; 
-  border-top: 1px solid #000; 
-  margin-left: 3em;
+nav li {
+  display: block;
+  color: var(--tekstKleur);
+  padding: 1.6em;
+  margin: 0 4em;
+  font-size: 1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
 }
 
 nav li:hover {
-  background-color: #ffffff;
-  color: #000000;
+  color: var(--tekstKleur);
   transition-duration: 0.5s;
-  transform: scale(1);
   transition: all 0.3s;
-  transition-delay: 0.1s;
-  border-bottom: 1px solid rgb(0, 0, 0); /* Voeg deze regel toe om een onderstreping toe te voegen bij hover */
+  border-bottom-color: var(--tekstKleur); 
+}
+
+nav li a:active {
+  color: purple;
 }
 
 
+/* Stlijl voor algemene tekst */
 
-/* tab */
-
-a :focus {
-  background-color: hotpink;
+h2,
+section:nth-of-type(3) h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  color: var(--tekstKleur);
+  line-height: 2em;
+  margin-top: 2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-
-.link--underkine {
-  text-decoration: none;
-  color: white;
-}
-
-/* Einde menu balk */
-
-
-/* tekst*/
-
-p {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 1;
-  font-size: 20px;
-  color: rgb(5, 41, 12);
-  align-items: center;
-}
-
-h4 {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 0;
-  font-size: 30px;
+section:nth-of-type(3) h2 {
+  color: grey;
+  font-size: 25px;
   text-align: center;
-  color: rgb(5, 41, 12);
+  margin-bottom: 2em;
+}
+
+section:nth-of-type(5) h3 {
+  text-align: center;
+  font-size: 31px;
+  margin-top: 2em;
+}
+
+section:nth-of-type(5) p {
+  margin: 3em;
+  display: flex;
+  font-size: 1.2em;
+  color: var(--tekstKleur);
+  line-height: 2em;
   margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 0;
-}
-
-h3 {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  color: rgba(255, 255, 255, 0.899);
-  font-size: 1000px;
-  font-weight: 300;
-  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  margin-top: -1.5em;
 }
 
+
+
+
+
+
+/****************/
+/* index pagina */
+/****************/
 
 /* beginscherm img */
-.begin {
+
+main section img {
+  padding-top: 1em;
   width: 100%;
-  display: flex;
-  text-align: center;
 }
 
-.images.home {
+
+/* Button sltijling */
+
+
+section span {
+  display: flex;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  font-size: 1.2em;
+  padding: 13px 33px;
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+  transition: background-color 0.5s, color 0.5s;
+}
+
+section span:hover {
+  background-color: #212b36;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+section span:active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+
+
+/* Gift season images */
+
+section ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
   padding: 1em;
 }
 
-.images.home li {
+section ul li {
   margin: 0 10px;
 }
 
-.images.home img {
-  max-width: 100%;
-  height: auto;
+section:nth-of-type(5) ul img {
+  transition: 0.5s, border-radius 0.5s;
+  margin-top: -2em;
 }
 
-/* gift seson image */
-
-.images.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-}
-
-.images.home li {
-  margin: 0 10px;
-}
-
-.images.home img {
-  max-width: 100%;
-  height: auto;
-  transition-delay: 0.30s;
-  transition: all 0.3s;
-  transform: scale(1);
-}
-
-.homeeee:hover {
-  background: #ffffff;
+section:nth-of-type(5) img:hover{
+  background: none;
   border-radius: 50%;
-}
-
-/* draaien */
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.draaien {
-  animation: spin 10s linear infinite;
+  transition-duration: 0.5s;
 }
 
 
-h3 {
-  width: 100%;
-  position: absolute;
-  top: 55%; /* Verhoogde waarde om het naar beneden te brengen */
-  color: rgba(255, 255, 255, 0.899);
-  font-size: 40px;
-  font-weight: 300;
-  text-decoration: none;
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  margin-top: 1px; /* Hiermee kun je het h3-element een beetje naar boven of beneden aanpassen */
-}
-
-
-header {
-  width: 30em;
-  padding: 6;
-  margin-left: 30em;
-  margin-right: 15em;
-  align-items: center;
-  -ms-flex-align: center;
-  justify-content: center;
-}
-
-
-
-/* boven aan img */
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/****************/
-/* about pagina */
-/****************/
-
-
-
-.about {
-  height: auto;
-  width: 45%;
-}
-
-.aboutp {
-  font-size: 22px;
-  margin-top: 4em;
-  margin-left: 5em;
-  margin-right: 5em;
-}
-
-article {
-  display: flex;
-  justify-content: space-around;
-  padding: 1em;
-  margin-top: 1em;
-  border: 1px;
-  margin: 2em;
-  background-color: rgba(248, 241, 241, 0.71);
- 
-}
-
-article img {
-  width: 22em;
-  height: 35em;
-  padding: 2em;
-  display: flex;
-}
 
 
 /**********************/
 /* Inspiration Pagina */
 /**********************/
 
-
-.detail {
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.container {
-  width: 100%;
-  min-height: 100vh;
-  padding-left: 8%;
-  box-sizing: border-box;
-  overflow: auto;
-  margin-top: 1em;
-
-}
-
-
-.inspiration {
+.detail section div{
   width: 90%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 4em;
-  justify-content: center;
-  align-items: center;
+  gap: 5em;
   padding-top: 2em;
 }
 
-.inspiration img{
+.detail div img{
   width: 25em;
   height: 25em;
   transition: transform 0.5s ease;
 }
 
-.inspiration img:hover {
+.detail div img:hover {
   transform: scale(1.1);
   transition: 0.5s;
 }
+
+.detail{
+  margin-bottom: 2em;
+}
+
+
+
+
 
 /***************/
 /* blog pagina */
 /***************/
 
-
 .blog-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 4em;
+  margin: 1.5em;
 }
 
-
-.blog-post {
-  width: 30%;
-  margin-bottom: 20px;
-  box-sizing: border-box;
+.blog-container article {
+  max-width: 30%;
+  margin-bottom: 2.5em;
+  transition: transform 0.5s ease;
 }
 
-
-.blog-post img {
+.blog-container article img{
   max-width: 100%;
   height: 15em;
+}
+
+.blog-container article h3{
+text-align: center;
+font-size: 20px;
+margin: 0.5em;
+margin-top: 1em;
+}
+
+.blog-container article p{
+  line-height: 2em;
+  margin-top: 1em;
+}
+
+.blog-container article:hover{
+  transform: scale(0.95);
+  transition: 0.5s;
+}
+
+
+
+
+
+/****************/
+/* about pagina */
+/****************/
+
+
+.about {
+  position: relative; /* Added position relative to serve as a reference point for absolute positioning */
+  display: flex;
+  padding: 1em;
+  margin: 2em;
+  background-color: #fcf9f7;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about img {
+  background: none;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 60%;
+  padding: 2em;
+}
+
+.about h3 {
+  position: absolute; /* Added position absolute */
+  background: none;
+  color: #000000;
+  font-size: 24px;
+  margin-left: 34.2em;
+  margin-top: 3em;
+}
+
+.about p {
+  font-size: 23px;
+  margin-top: 6em;
+  margin-left: 5em;
+  margin-right: 5em;
+  background: none;
+  color: black;
+}
+
+
+
+
+
+/**********/
+/* footer */
+/**********/
+footer figure {
+  background-color: #fcf9f7;
+  padding: 2em;
+  text-align: center;
+}
+
+footer a {
+  background:none;
+  color: #212b36;
+  padding-bottom: 0.5em; /* Aangepaste waarde */
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Stijl voor de iconen */
+footer figure img {
+  width: 3em;
+  height: 3em;
+  background: none;
+  margin: 0.2em; 
+}
+
+footer a:hover {
+  color: #706a6a;
+  transition-duration: 0.5s;
+  transition: all 0.3s;
+  text-decoration: underline;
+}
+
+footer a:active {
+  color: purple;
 }
 
